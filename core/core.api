@@ -21,8 +21,9 @@ service core-api {
 	get /user/detail(UserDetailRequest) returns (UserDetailReply)
 	
 	// 验证码发送
-	@handler MailCodeSend
-	post /mail/code/send(MailCodeSendRequest) returns (MailCodeSendReply)
+	@handler MailCodeSendRegister
+	post /mail/code/send/register(MailCodeSendRequest) returns (MailCodeSendReply)
+	
 }
 
 type LoginRequest {

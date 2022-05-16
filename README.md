@@ -9,6 +9,9 @@ go install github.com/zeromicro/go-zero/tools/goctl@latest
 goctl migrate —verbose —version v1.3.3
 
 go get github.com/jordan-wright/email
+
+go get github.com/go-redis/redis/v8
+
 ```
 
 使用到的命令

@@ -10,21 +10,21 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type MailCodeSendLogic struct {
+type MailCodeSendRegisterLogic struct {
 	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-func NewMailCodeSendLogic(ctx context.Context, svcCtx *svc.ServiceContext) *MailCodeSendLogic {
-	return &MailCodeSendLogic{
+func NewMailCodeSendRegisterLogic(ctx context.Context, svcCtx *svc.ServiceContext) *MailCodeSendRegisterLogic {
+	return &MailCodeSendRegisterLogic{
 		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-func (l *MailCodeSendLogic) MailCodeSend(req *types.MailCodeSendRequest) (resp *types.MailCodeSendReply, err error) {
+func (l *MailCodeSendRegisterLogic) MailCodeSendRegister(req *types.MailCodeSendRequest) (resp *types.MailCodeSendReply, err error) {
 	err = helper.MailSendCode(req.Email, "123456")
 	if err != nil {
 		return nil, err
